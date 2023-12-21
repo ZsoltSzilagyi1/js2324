@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt('Cate numere vrei sa introduci?', 5)
+        var max = 0;
+        var min = 0;
+        for(i=1;i<=n;i++)
+        {   
+            
+            let nr = +prompt(`Numarul ${i} este`);
+            console.log(nr);
+            if(nr > max)
+                max = nr;
+            if((i == 1) || (nr < min)) 
+                min = nr;
+        
+        }
+        console.log(max)
+        console.log(min)
+
+
+    </script>
+</body>
+</html>
