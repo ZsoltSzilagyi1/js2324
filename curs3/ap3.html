@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var pets = new Array();
+     pets[0] = "Pisica";
+     pets[1] = "Caine";
+     pets[2] = "Papagal";
+     pets[3] = "Hamster";
+     pets[4] = "Iepure";
+     pets[5] = "Arici";
+     console.log(pets);
+     document.write("Valorile memorate in tablou sunt:" + "<br />")
+     for(x in pets) { document.write(x + "<br />");}
+
+     for(x of pets) { document.write(x + "<br />");}
+     </script>
+</body>
+</html>

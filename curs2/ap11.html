@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+
+        var x = 1;
+        let n = +prompt('Numarul n');
+        while(x <= n)
+        {   
+           if(x % 2 != 0)
+            {document.write('<p>Numarul este</p>' + x );
+            }
+             x++;            
+        }
+        
+        document.write('<hr>');
+
+        x=1;
+        for(let i=0;i<=n;i++)
+        {
+            if(x % 2 != 0){
+                document.write('<b>Numarul este </b>' + x + '<br>') 
+            }
+            x++;
+        }
+
+
+        document.write('<hr>');
+        x=1;
+
+        do{
+            if(x % 2 != 0)
+            {document.write('<p>Numarul este</p>' + x );
+            }
+             x++;     
+        }while(x<=n)
+
+
+
+     </script>   
+
+
+
+
+</body>
+</html>
