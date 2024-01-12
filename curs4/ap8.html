@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myFunction(a, b, c, d){
+            for(let i = 0; i <= arguments.length; i++) {
+                console.log(arguments[i]);
+                if(i == 2){
+                    c = 'Ion;' //valoare
+                }
+            }
+            console.log(typeof d);
+            if (typeof d == 'object') {
+                d[0] = 'Dacia'; //referinta
+            }
+        }
+
+        let myName = 'Adrian';
+        let myCars = ["Volvo", "BMW", "Toyota", "Saab"];
+
+
+    </script>
+</body>
+</html>
