@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function salut(id){
+            id.innerHTML = 'Acesta este un mesaj scris din JavaScript!';
+        }
+    </script>
+</head>
+<body>
+    <h2>Prima mea pagina</h2>
+
+    <p id="myid">Salut!</p>
+    <h3 id="h3lol">saly</h3>
+    <script>
+        var id = document.getElementById("myid");
+        console.log(id);
+        salut(id);
+    </script>
+</body>
+</html>
