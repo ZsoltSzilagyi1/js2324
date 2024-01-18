@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="demo"></section>
+    <script>
+        function drawTags(tname, class_name, content, count = 1){
+            for(let i = 0; i < count; i++){
+                createTag(tname, content);
+                createAtribute(class_name, tname, i);
+            }
+
+            function createTag(tname, content){
+                const newTag = document.createElement(tname, content);
+                newTag.innerHTML = content;
+                document.getElementById("demo").appendChild(newTag);
+
+            }
+            function createAtribute(valAttr, newTag, nrTag){
+                console.log(valAttr, newTag);
+                const att = document.createAttribute("class");
+                att.value = valAttr;
+                newTag = document.getElementsByTagName(newTag)[nrTag];
+                newTag.setAttributeNode(att);
+            }
+        }
+        drawTags("h1", "", "Salut", 1);
+        drawTags("div", "myclass", "Salut din DIV", 6);
+    </script>
+</body>
+</html>

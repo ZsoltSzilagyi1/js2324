@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        
+        let myp = document.getElementById('demo');
+        let myContent = '';
+        for(let i = 0; i <= 127; i++){
+            let char = String.fromCharCode(i);
+            myContent += `<span> ${i} ${char} </span> <br>`;
+        }
+        myp.innerHTML = myContent;
+    </script>
+</body>
+</html>

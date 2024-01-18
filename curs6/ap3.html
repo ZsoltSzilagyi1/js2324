@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pass_gen()">
+        Click for a new password.
+    </button>
+    <div>
+        <p id="password"></p> 
+    </div>
+    
+    <script>
+        var new_pass = document.getElementById('password');
+
+        function newPassword(n){
+            let pass = '';
+            let str = 'ABCDEFGHJKLMNPQRSTUVWXYZ' +
+                    'abdefghjkmnpqrstuvwxyz0123456789@#!+=-/';
+            for(let i = 1; i <= n; i++){
+                let char = Math.floor(Math.random() * str.length + 1);
+                pass += str.charAt(char);
+            }
+            return pass;
+        }
+
+        function pass_gen(){
+            let lgt = +eval(prompt('What length?', 16));
+            if( typeof lgt == 'number' && lgt >= 6 && lgt <= 30){
+                new_pass.innerHTML = newPassword(lgt);
+            }
+            else{
+                alert('Va rugam sa introduceti o valoare numerice (6-30)!')
+            }
+        }
+
+    </script>
+</body>
+</html>
