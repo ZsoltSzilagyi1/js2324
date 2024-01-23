@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(id,nume,varsa) {
+            this.id = id;
+            this.nume = nume;
+            this.varsta = varsa;
+
+            this.salut = function(){
+                console.log(`Salut! Numele meu este ${this.nume} si am ${this.varsta} ani.`);
+            }
+
+            this.examen = function(nota1, nota2){
+                this.nota1 = parseInt(nota1);
+                this.nota2 = parseInt(nota2);
+                console.log(`Azi am terminat examenele la JavaScript!`);
+            }
+
+            this.calMedia = function(){
+                if(this.nota1 > 1 && this.nota2 > 1){
+                    this.media = (this.nota1 + this.nota2) / 2;
+                }else{
+                    console.error(`Nu sunt sificiente note!`);
+                }
+            }
+        }
+        const student1 = new Student(1, 'Popescu Ion', 19);
+        const student2 = new Student(2,'Zsolt Szilagyi',22);
+
+        student1.examen(9);
+        student1.calMedia();
+        console.info(student1.media)
+        
+        student1.salut()
+        student2.salut()
+        </script>
+</body>
+</html>
