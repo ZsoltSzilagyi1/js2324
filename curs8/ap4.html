@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myArr=[
+        [1,6,3,4,7,12,42],
+        [21,22,31,1,25,5,0],
+        [6,19,32,42,5,1,2]
+        ]
+        
+        myArr.forEach(function(item){
+            item.sort(function(a,b){
+                return a - b;
+            })
+        })
+
+        console.log(myArr);
+      
+        
+    </script>
+</body>
+</html>
