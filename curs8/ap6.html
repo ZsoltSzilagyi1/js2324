@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let sursa = '12,  34,56,      28';
+        let sursa2 = 'Ana are mere si pere';
+        let pattern = /,\s*/;
+        let result = sursa.split(pattern);
+        console.log(result);
+        let pattern2 = /(m|p)ere/ig;
+        let result2 = sursa2.match(pattern2);
+        console.log(result2)
+
+
+
+    </script>
+</body>
+</html>
