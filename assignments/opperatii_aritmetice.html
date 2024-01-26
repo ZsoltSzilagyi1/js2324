@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment - Programul pentru efectuarea operațiilor aritmetice de bază</h1>
+    <button onclick="operatii()">Apasa pentru a face un calcul.</button>
+    <p id="myP"></p>
+    
+    <script>
+            function operatii(){
+            let nr1 = +prompt('Introduceti valoarea primului numar', 0);
+            let operator = prompt('Introduceti operatia aritmetica de baza:', '+');
+            let nr2 = +prompt('Introduceti valoarea al doilea numar', 0);
+            let myP = document.getElementById('myP');
+            if(operator == '+'){
+                myP.innerHTML = `<h2>${nr1} + ${nr2} = ${nr1 + nr2}</h2>`;
+            }
+            else if(operator == '-'){
+                myP.innerHTML = `<h2>${nr1} - ${nr2} = ${nr1 - nr2}</h2>`;
+            }
+            else if(operator == '*'){
+                myP.innerHTML = `<h2>${nr1} * ${nr2} = ${nr1 * nr2}</h2>`;
+            }
+            else if(operator == '/'){
+                myP.innerHTML = `<h2>${nr1} / ${nr2} = ${nr1 / nr2}</h2>`;
+            }
+            else if(nr1 === NaN || nr2 === NaN){
+            alert('Eroare! Verificati in console!')
+                throw {
+                name: 'Valoare gresita.',
+                message: 'Va rog introduceti un numar.'
+            }}
+            else{
+            alert('Eroare! Verificati in console!')
+                throw {
+                name: 'Operator gresit.',
+                message: 'Va rog introduceti unul dintre operatorii cunoscuti: +, -, *, /.'
+            }}
+            }
+            
+    </script>
+</body>
+</html>
