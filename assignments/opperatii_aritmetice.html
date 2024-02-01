@@ -16,7 +16,14 @@
             let operator = prompt('Introduceti operatia aritmetica de baza:', '+');
             let nr2 = +prompt('Introduceti valoarea al doilea numar', 0);
             let myP = document.getElementById('myP');
-            if(operator == '+'){
+            if(nr1 === NaN || nr2 === NaN){
+            alert('Eroare! Verificati in console!')
+                throw {
+                name: 'Valoare gresita.',
+                message: 'Va rog introduceti un numar.'
+                }
+                
+            }else if(operator == '+'){
                 myP.innerHTML = `<h2>${nr1} + ${nr2} = ${nr1 + nr2}</h2>`;
             }
             else if(operator == '-'){
@@ -28,12 +35,6 @@
             else if(operator == '/'){
                 myP.innerHTML = `<h2>${nr1} / ${nr2} = ${nr1 / nr2}</h2>`;
             }
-            else if(nr1 === NaN || nr2 === NaN){
-            alert('Eroare! Verificati in console!')
-                throw {
-                name: 'Valoare gresita.',
-                message: 'Va rog introduceti un numar.'
-            }}
             else{
             alert('Eroare! Verificati in console!')
                 throw {
